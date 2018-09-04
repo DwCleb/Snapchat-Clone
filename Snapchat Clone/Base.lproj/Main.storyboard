@@ -1,24 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bHL-7q-gbg">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Snapchat-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Snapchat_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRb-7y-2JQ">
+                                <rect key="frame" x="0.0" y="597" width="375" height="70"/>
+                                <color key="backgroundColor" red="0.13656056222102242" green="0.78858058054057178" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="ADV-zv-8Gh"/>
+                                </constraints>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="hcS-Px-zoS" kind="show" id="Dq1-ax-Eh6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vad-DX-Dyg">
+                                <rect key="frame" x="0.0" y="527" width="375" height="70"/>
+                                <color key="backgroundColor" red="0.94901960784313721" green="0.15294117647058825" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="2I9-iN-g7F"/>
+                                </constraints>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="f1t-rL-x8P" kind="show" id="xBS-ai-sre"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0mZ-Ha-W7s">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="529"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" highlightedImage="logo" translatesAutoresizingMaskIntoConstraints="NO" id="i3X-Ca-5iL">
+                                        <rect key="frame" x="122" y="199" width="130" height="130"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="130" id="dDG-Qe-oGE"/>
+                                            <constraint firstAttribute="height" constant="130" id="eMF-kZ-fI7"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="i3X-Ca-5iL" firstAttribute="centerY" secondItem="0mZ-Ha-W7s" secondAttribute="centerY" id="7eP-K8-EF2"/>
+                                    <constraint firstItem="i3X-Ca-5iL" firstAttribute="centerX" secondItem="0mZ-Ha-W7s" secondAttribute="centerX" id="N3v-Jj-enn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="0.36200629340277779" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0mZ-Ha-W7s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1CQ-Js-Dv0"/>
+                            <constraint firstItem="0mZ-Ha-W7s" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="7Qb-dI-3G6"/>
+                            <constraint firstItem="qRb-7y-2JQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MXN-za-ikf"/>
+                            <constraint firstItem="qRb-7y-2JQ" firstAttribute="top" secondItem="0mZ-Ha-W7s" secondAttribute="bottom" constant="68" id="bIa-Af-gUv"/>
+                            <constraint firstItem="Vad-DX-Dyg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dRP-Sh-5Ce"/>
+                            <constraint firstItem="qRb-7y-2JQ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="f4r-wY-Wkc"/>
+                            <constraint firstItem="0mZ-Ha-W7s" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fvy-Hr-J2C"/>
+                            <constraint firstItem="Vad-DX-Dyg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jUx-qA-m2y"/>
+                            <constraint firstItem="qRb-7y-2JQ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nZd-e7-SZw"/>
+                            <constraint firstItem="qRb-7y-2JQ" firstAttribute="top" secondItem="Vad-DX-Dyg" secondAttribute="bottom" id="ppy-7z-AVh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Snapchat" id="cMs-38-pxE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1072.8" y="91.304347826086968"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="KUh-NK-mEl">
+            <objects>
+                <viewController id="f1t-rL-x8P" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tQr-mP-4CO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ZtN-jv-iR6"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TUv-UG-OOs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1996" y="-233"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="amN-nA-hlB">
+            <objects>
+                <viewController id="hcS-Px-zoS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xdX-8w-TAU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="eXb-DF-L3Z"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z5g-Yy-dE7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1996" y="453"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZNh-Lv-6we">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bHL-7q-gbg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pFT-lU-Vbc">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="QQu-bE-k3U"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eA1-Gi-k3T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="91.304347826086968"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="200" height="200"/>
+    </resources>
 </document>
