@@ -14,6 +14,8 @@
 		5B3E1E95213EF3D60086427C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B3E1E93213EF3D60086427C /* LaunchScreen.storyboard */; };
 		5B3E1EA0213EF3D60086427C /* Snapchat_CloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E1E9F213EF3D60086427C /* Snapchat_CloneTests.swift */; };
 		5B3E1EAB213EF3D60086427C /* Snapchat_CloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E1EAA213EF3D60086427C /* Snapchat_CloneUITests.swift */; };
+		5B3E1EB9213EF5FF0086427C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B3E1EB8213EF5FF0086427C /* GoogleService-Info.plist */; };
+		83B4DF3C579B3F361F57588E /* Pods_Snapchat_Clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A231C96F039D582340BE7B4 /* Pods_Snapchat_Clone.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A231C96F039D582340BE7B4 /* Pods_Snapchat_Clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Snapchat_Clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B3E1E87213EF3D50086427C /* Snapchat Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Snapchat Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B3E1E8A213EF3D50086427C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B3E1E8C213EF3D50086427C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +50,9 @@
 		5B3E1EA6213EF3D60086427C /* Snapchat CloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Snapchat CloneUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B3E1EAA213EF3D60086427C /* Snapchat_CloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snapchat_CloneUITests.swift; sourceTree = "<group>"; };
 		5B3E1EAC213EF3D60086427C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B3E1EB8213EF5FF0086427C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DC6CE267E283F107124EFD9B /* Pods-Snapchat Clone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snapchat Clone.release.xcconfig"; path = "Pods/Target Support Files/Pods-Snapchat Clone/Pods-Snapchat Clone.release.xcconfig"; sourceTree = "<group>"; };
+		E70C624E19F68BDBD61FDD63 /* Pods-Snapchat Clone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snapchat Clone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Snapchat Clone/Pods-Snapchat Clone.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B4DF3C579B3F361F57588E /* Pods_Snapchat_Clone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +88,8 @@
 				5B3E1E9E213EF3D60086427C /* Snapchat CloneTests */,
 				5B3E1EA9213EF3D60086427C /* Snapchat CloneUITests */,
 				5B3E1E88213EF3D50086427C /* Products */,
+				9D9DFCCFBC65004067D56F46 /* Pods */,
+				89E17905DB70CBE155DD676E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +112,7 @@
 				5B3E1E91213EF3D60086427C /* Assets.xcassets */,
 				5B3E1E93213EF3D60086427C /* LaunchScreen.storyboard */,
 				5B3E1E96213EF3D60086427C /* Info.plist */,
+				5B3E1EB8213EF5FF0086427C /* GoogleService-Info.plist */,
 			);
 			path = "Snapchat Clone";
 			sourceTree = "<group>";
@@ -125,6 +135,23 @@
 			path = "Snapchat CloneUITests";
 			sourceTree = "<group>";
 		};
+		89E17905DB70CBE155DD676E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A231C96F039D582340BE7B4 /* Pods_Snapchat_Clone.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9D9DFCCFBC65004067D56F46 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E70C624E19F68BDBD61FDD63 /* Pods-Snapchat Clone.debug.xcconfig */,
+				DC6CE267E283F107124EFD9B /* Pods-Snapchat Clone.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +159,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B3E1EAF213EF3D60086427C /* Build configuration list for PBXNativeTarget "Snapchat Clone" */;
 			buildPhases = (
+				07D256D8948E407E9C6A1A1E /* [CP] Check Pods Manifest.lock */,
 				5B3E1E83213EF3D50086427C /* Sources */,
 				5B3E1E84213EF3D50086427C /* Frameworks */,
 				5B3E1E85213EF3D50086427C /* Resources */,
+				FB5878CA5CA12FE76753D2F2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -230,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B3E1E95213EF3D60086427C /* LaunchScreen.storyboard in Resources */,
+				5B3E1EB9213EF5FF0086427C /* GoogleService-Info.plist in Resources */,
 				5B3E1E92213EF3D60086427C /* Assets.xcassets in Resources */,
 				5B3E1E90213EF3D50086427C /* Main.storyboard in Resources */,
 			);
@@ -250,6 +280,59 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		07D256D8948E407E9C6A1A1E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Snapchat Clone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB5878CA5CA12FE76753D2F2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Snapchat Clone/Pods-Snapchat Clone-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Snapchat Clone/Pods-Snapchat Clone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5B3E1E83213EF3D50086427C /* Sources */ = {
@@ -428,6 +511,7 @@
 		};
 		5B3E1EB0213EF3D60086427C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E70C624E19F68BDBD61FDD63 /* Pods-Snapchat Clone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -440,12 +524,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cleber.Snapchat-Clone";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		5B3E1EB1213EF3D60086427C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC6CE267E283F107124EFD9B /* Pods-Snapchat Clone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -458,7 +543,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cleber.Snapchat-Clone";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
