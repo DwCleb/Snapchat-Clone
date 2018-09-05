@@ -7,9 +7,53 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SignInViewController: UIViewController {
-
+    
+    @IBOutlet weak var SIemail: UITextField!
+    @IBOutlet weak var SIpassword: UITextField!
+    
+    
+    func showMessage(title: String, message: String){
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        let close = UIAlertAction(title: "Okay", style: .cancel, handler: nil)
+        
+        alert.addAction( close )
+        present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func signIn(_ sender: Any) {
+        // get input values
+        if let email = self.SIemail.text {
+            if let password = self.SIpassword.text {
+                
+                //authenticate
+                let authenticate = Auth.auth()
+                authenticate.signIn(withEmail: email, password: password, completion: {(user, erro) in
+                    
+                    if erro == nil {
+                        
+                        if user == nil {
+                            self.showMessage(title: "Ops...", message: "Check your e-mail and password and try again, please.")
+                        } else {
+                            //signIn
+                            self.performSegue(withIdentifier: "SignInSegue", sender: nil)
+                        }
+                        
+                        
+                    } else {
+                        //erro in signIn
+                        self.showMessage(title: "Ops...", message: (erro?.localizedDescription)!)
+                        
+                    }
+                })
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

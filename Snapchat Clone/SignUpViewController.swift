@@ -26,7 +26,7 @@ class SignUpViewController: UIViewController {
     }
     
     
-    @IBAction func createAccount(_ sender: Any) {
+    @IBAction func signUp(_ sender: Any) {
    
         
         //get input values
@@ -39,13 +39,18 @@ class SignUpViewController: UIViewController {
                        
                         //create account in Firebase
                         let authenticate = Auth.auth()
-                        authenticate.createUser(withEmail: email, password: password, completion: {(usuario, erro) in
+                        authenticate.createUser(withEmail: email, password: password, completion: {(user, erro) in
                             
                             if erro == nil {
-                                self.showMessage(title: "Account created", message: "Your user is created, enjoy!")
+                                
+                                if user == nil {
+                                    self.showMessage(title: "Ops...", message: "We had a problem. Try again, please.")
+                                } else {
+                                    
+                                    self.performSegue(withIdentifier: "SignUpSegue", sender: nil)
+                                }
                                
                             } else {
-                                print(erro.debugDescription)
                                 self.showMessage(title: "Ops...", message: (erro?.localizedDescription)!)
                                 
                             }
