@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B33EF5321405EF00077B305 /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B33EF5221405EF00077B305 /* SnapsViewController.swift */; };
+		5B33EF55214061F50077B305 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B33EF54214061F50077B305 /* PhotoViewController.swift */; };
 		5B3E1E8B213EF3D50086427C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E1E8A213EF3D50086427C /* AppDelegate.swift */; };
 		5B3E1E8D213EF3D50086427C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E1E8C213EF3D50086427C /* ViewController.swift */; };
 		5B3E1E90213EF3D50086427C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B3E1E8E213EF3D50086427C /* Main.storyboard */; };
@@ -39,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		0A231C96F039D582340BE7B4 /* Pods_Snapchat_Clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Snapchat_Clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B33EF5221405EF00077B305 /* SnapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapsViewController.swift; sourceTree = "<group>"; };
+		5B33EF54214061F50077B305 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		5B3E1E87213EF3D50086427C /* Snapchat Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Snapchat Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B3E1E8A213EF3D50086427C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B3E1E8C213EF3D50086427C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +118,8 @@
 				5B3E1E8C213EF3D50086427C /* ViewController.swift */,
 				5B3E1EBA213F085B0086427C /* SignInViewController.swift */,
 				5B3E1EBC213F08750086427C /* SignUpViewController.swift */,
+				5B33EF5221405EF00077B305 /* SnapsViewController.swift */,
+				5B33EF54214061F50077B305 /* PhotoViewController.swift */,
 				5B3E1E8E213EF3D50086427C /* Main.storyboard */,
 				5B3E1E91213EF3D60086427C /* Assets.xcassets */,
 				5B3E1E93213EF3D60086427C /* LaunchScreen.storyboard */,
@@ -337,10 +343,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B33EF5321405EF00077B305 /* SnapsViewController.swift in Sources */,
 				5B3E1E8D213EF3D50086427C /* ViewController.swift in Sources */,
 				5B3E1E8B213EF3D50086427C /* AppDelegate.swift in Sources */,
 				5B3E1EBD213F08750086427C /* SignUpViewController.swift in Sources */,
 				5B3E1EBB213F085B0086427C /* SignInViewController.swift in Sources */,
+				5B33EF55214061F50077B305 /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
