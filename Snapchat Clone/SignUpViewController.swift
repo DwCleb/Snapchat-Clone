@@ -7,9 +7,58 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SignUpViewController: UIViewController {
-
+   
+    @IBOutlet weak var SUemail: UITextField!
+    @IBOutlet weak var SUpassword: UITextField!
+    @IBOutlet weak var SUconfirmPassword: UITextField!
+    
+    func showMessage(title: String, message: String){
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        let close = UIAlertAction(title: "Okay", style: .cancel, handler: nil)
+        
+        alert.addAction( close )
+        present(alert, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func createAccount(_ sender: Any) {
+   
+        
+        //get input values
+        if let email = self.SUemail.text {
+            if let password = self.SUpassword.text {
+                if let confirmPassword = self.SUconfirmPassword.text {
+                 
+                    //authenticate password
+                    if password == confirmPassword {
+                       
+                        //create account in Firebase
+                        let authenticate = Auth.auth()
+                        authenticate.createUser(withEmail: email, password: password, completion: {(usuario, erro) in
+                            
+                            if erro == nil {
+                                self.showMessage(title: "Account created", message: "Your user is created, enjoy!")
+                               
+                            } else {
+                                print(erro.debugDescription)
+                                self.showMessage(title: "Ops...", message: (erro?.localizedDescription)!)
+                                
+                            }
+                        })
+                    } else {
+                        self.showMessage(title: "Ops...", message: "Well, your password don't match with your confirm password")
+                        
+                    }
+                }
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
