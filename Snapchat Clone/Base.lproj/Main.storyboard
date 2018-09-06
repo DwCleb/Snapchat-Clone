@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -209,6 +210,9 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="next:" destination="98k-E1-Zha" eventType="touchUpInside" id="xFk-j7-kaa"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5hC-KM-elG">
                                 <rect key="frame" x="0.0" y="594" width="375" height="30"/>
@@ -216,7 +220,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FqK-Lp-Baq">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FqK-Lp-Baq">
                                 <rect key="frame" x="0.0" y="64" width="375" height="530"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the picture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJP-1n-z2e">
@@ -226,26 +230,43 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="FqK-Lp-Baq" firstAttribute="leading" secondItem="sPa-Ct-zKb" secondAttribute="leading" id="4ob-Yc-Xgv"/>
+                            <constraint firstItem="FqK-Lp-Baq" firstAttribute="leading" secondItem="sPa-Ct-zKb" secondAttribute="leading" id="0Ly-7E-IPi"/>
                             <constraint firstItem="R77-t0-nmz" firstAttribute="top" secondItem="5hC-KM-elG" secondAttribute="bottom" constant="-3" id="5AH-9r-hci"/>
                             <constraint firstItem="5hC-KM-elG" firstAttribute="width" secondItem="R77-t0-nmz" secondAttribute="width" id="716-RL-fd8"/>
+                            <constraint firstItem="FqK-Lp-Baq" firstAttribute="trailing" secondItem="sPa-Ct-zKb" secondAttribute="trailing" id="ALf-wE-bWu"/>
                             <constraint firstItem="R77-t0-nmz" firstAttribute="trailing" secondItem="sPa-Ct-zKb" secondAttribute="trailing" id="EHK-pM-ZFS"/>
-                            <constraint firstItem="FqK-Lp-Baq" firstAttribute="top" secondItem="sPa-Ct-zKb" secondAttribute="top" id="Ij2-pd-OSS"/>
-                            <constraint firstItem="5hC-KM-elG" firstAttribute="top" secondItem="FqK-Lp-Baq" secondAttribute="bottom" id="NXR-9h-qKp"/>
                             <constraint firstItem="R77-t0-nmz" firstAttribute="leading" secondItem="sPa-Ct-zKb" secondAttribute="leading" id="PTe-e2-MwT"/>
                             <constraint firstItem="cJP-1n-z2e" firstAttribute="centerX" secondItem="BS7-B7-AQf" secondAttribute="centerX" id="Qa2-wK-szB"/>
                             <constraint firstItem="R77-t0-nmz" firstAttribute="bottom" secondItem="sPa-Ct-zKb" secondAttribute="bottom" id="YL2-80-jQe"/>
-                            <constraint firstAttribute="trailing" secondItem="FqK-Lp-Baq" secondAttribute="trailing" id="hVW-eh-PYm"/>
+                            <constraint firstItem="FqK-Lp-Baq" firstAttribute="top" secondItem="sPa-Ct-zKb" secondAttribute="top" id="esS-C8-mnv"/>
+                            <constraint firstItem="5hC-KM-elG" firstAttribute="top" secondItem="FqK-Lp-Baq" secondAttribute="bottom" id="nI5-hc-EWX"/>
                             <constraint firstItem="5hC-KM-elG" firstAttribute="centerX" secondItem="R77-t0-nmz" secondAttribute="centerX" id="nrY-dc-tUX"/>
                             <constraint firstItem="cJP-1n-z2e" firstAttribute="centerY" secondItem="BS7-B7-AQf" secondAttribute="centerY" id="p80-5T-eaI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sPa-Ct-zKb"/>
                     </view>
                     <navigationItem key="navigationItem" id="MGw-s1-jf5">
-                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="N4R-BE-mS6"/>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="camera" id="N4R-BE-mS6">
+                                <connections>
+                                    <action selector="takePhoto:" destination="98k-E1-Zha" id="HXC-Pz-9oH"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Photo Library" id="bSm-Rj-OiA">
+                                <connections>
+                                    <action selector="photoLibrary:" destination="98k-E1-Zha" id="bpG-mv-t00"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="image" destination="FqK-Lp-Baq" id="wAv-AA-rzT"/>
+                        <outlet property="imageDescription" destination="5hC-KM-elG" id="lDx-Xn-ZAy"/>
+                        <outlet property="nextButton" destination="R77-t0-nmz" id="8h5-Ov-cyS"/>
+                        <outlet property="text" destination="cJP-1n-z2e" id="8H0-Wp-rhZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wvi-Ko-JDE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
